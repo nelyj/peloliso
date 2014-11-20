@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :products
+  resources :productos, :controller => 'products'
 
-  resources :staffs
+  resources :integrantes, :controller => 'staffs'
 
-  resources :barbershops
+  resources :peluquerias, :controller => 'barbershops'
 
   devise_for :users
   root 'home#index'
