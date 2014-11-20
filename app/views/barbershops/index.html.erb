@@ -1,0 +1,31 @@
+<h1>Listing barbershops</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Description</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @barbershops.each do |barbershop| %>
+      <tr>
+        <td><%= barbershop.name %></td>
+        <td><%= barbershop.address %></td>
+        <td><%= barbershop.description %></td>
+        <td><%= barbershop.user_id %></td>
+        <td><%= link_to 'Show', barbershop %></td>
+        <td><%= link_to 'Edit', edit_barbershop_path(barbershop) %></td>
+        <td><%= link_to 'Destroy', barbershop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Barbershop', new_barbershop_path %>

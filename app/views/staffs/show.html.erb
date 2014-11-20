@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @staff.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @staff.age %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @staff.experience %>
+</p>
+
+<p>
+  <strong>Specialty:</strong>
+  <%= @staff.specialty %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @staff.about %>
+</p>
+
+<p>
+  <strong>Barbershop:</strong>
+  <%= @staff.barbershop_id %>
+</p>
+
+<%= link_to 'Edit', edit_staff_path(@staff) %> |
+<%= link_to 'Back', staffs_path %>
